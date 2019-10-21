@@ -1,0 +1,108 @@
+.page-id-7067{
+    .entry-title{
+        display: none;
+    }
+
+    .site-main{
+        width: 100%;
+        margin-bottom: 15%;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255,255,255,.7)), url("../../images/swm_logo_icon.png");
+        background-position: 105% 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .entry-content{
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+        align-items: center;
+        grid-row-gap: 30%;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto; 
+        margin-top: 5%;
+        padding-top: 5%;
+
+        p{
+            text-align: center;
+            @include set-font-thank-you-title;
+        }
+
+        .wp-block-button__link{
+            font-size: 20px;
+            font-family: $an_r;
+            width: 175px;
+            border: none;
+            border-color: none;
+            border-radius: 15px;
+            background: $color__brand-orange;
+            color:$color__brand-white;
+            line-height: 1;
+            padding: .6rem 1rem .4rem;
+
+            &:hover {
+                border-color: #ccc #bbb #aaa;
+                background: $color__brand-light-orange;
+                color: $color__text-main;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+@media only screen and (min-width: 600px) {
+    .entry-title{
+        display: none;
+    }
+
+        .site-main{
+                width: 100%;
+                margin-bottom: 5%;
+                background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, .7)), url("../../images/swm_logo_icon.png");
+                background-position: 105% 100%;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+
+    .entry-content{
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+        align-items: center;
+        grid-row-gap: 2%;
+        width: 50%;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto; 
+        margin-top: 5%;
+        padding-top: 5%;
+
+            p{
+                text-align: center;
+                @include set-font-thank-you-title;
+            }
+
+            .wp-block-button__link{
+                font-size: 20px;
+                width: 175px;
+                border: none;
+                border-color: none;
+                border-radius: 15px;
+                background-color: $color__brand-orange;
+                color:$color__brand-white;
+                line-height: 1;
+                padding: .6rem 1rem .4rem;
+
+                &:hover {
+                    border-color: #ccc #bbb #aaa;
+                    background: $color__brand-light-orange;
+                    color: $color__text-main;
+                    cursor: pointer;
+                }
+            }
+        
+        }
+    } 
+}

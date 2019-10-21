@@ -1,0 +1,47 @@
+# COMMUNITY PROJECT GITIGNORE #
+
+# Ignore OS files #
+# =============== #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
+
+# Ignore logs and databases #
+# ========================= #
+*.log
+*.sql
+error_log
+access_log
+
+# Ignore everything in "wp-content" except the "plugins" and "themes" directories. #
+# ================================================================================ #
+/*
+!.gitignore
+!plugins/
+!themes/
+!README.md
+
+# Ignore everything in "plugins" except certain plugins. #
+# ========================================================== #
+plugins/*
+!plugins/startswithme_plugins/
+!plugins/wck-custom-fields-and-custom-post-types-creator/
+
+# Ignore everything in "themes" except the active theme. #
+# ====================================================== #
+themes/*
+!themes/swm/
+
+# Ignore npm packages #
+# =================== #
+themes/swm/node_modules/*
+
+# Ignore build files #
+# ================== #
+themes/swm/gulpfile.js
+themes/swm/build/*

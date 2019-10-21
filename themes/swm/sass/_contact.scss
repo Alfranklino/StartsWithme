@@ -1,0 +1,98 @@
+.page-id-34 {
+  .entry-title {
+    display: none;
+  }
+  .site-main {
+    margin-top: 10rem;
+  }
+  .entry-content {
+    display: grid;
+    width: 425px;
+    grid-row-gap: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30%;
+
+    h2 {
+      grid-row: 1 / 2;
+      @include set-font-contact-title;
+    }
+
+    h4 {
+      grid-row: 2 / 3;
+      @include set-font-contact-mindfulness;
+    }
+
+    ol {
+      grid-row: 3 / 4;
+      padding-left: 0;
+      li {
+        counter-increment: list;
+        list-style-type: none;
+        @include set-font-contact-step-text;
+      }
+      li::before {
+        color: $color__brand-light-orange;
+        @include set-font-contact-steps-number;
+        content: counter(list) "";
+        margin-right: 5%;
+      }
+    }
+    .wpcf7 {
+      grid-row: 4 / 6;
+      width: 350px;
+      @include set-font-contact-form-label;
+    }
+  }
+
+  @media (min-width: 1120px) {
+    .entry-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 25% 15% 15% 45%;
+      width: 1120px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 5%;
+
+      h2 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        @include set-font-contact-title;
+        padding-right: 20%;
+        margin-bottom: 10%;
+      }
+
+      h4 {
+        grid-column: 1 / 2;
+        grid-row: 2/ 3;
+        @include set-font-contact-mindfulness;
+        margin-bottom: 5%;
+      }
+
+      ol {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        padding-left: 0;
+        li {
+          counter-increment: list;
+          list-style-type: none;
+          @include set-font-contact-step-text;
+        }
+        li::before {
+          color: $color__brand-light-orange;
+          @include set-font-contact-steps-number;
+          content: counter(list) "";
+          margin-right: 5%;
+        }
+      }
+      .wpcf7 {
+        grid-column: 2 /3;
+        grid-row: 2 / 5;
+        width: 375px;
+        @include set-font-contact-form-label;
+      }
+    }
+  }
+}

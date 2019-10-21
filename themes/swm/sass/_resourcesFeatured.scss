@@ -1,0 +1,385 @@
+//test
+.resourcesPage {
+  top: 20px;
+}
+
+.resourcesMenu {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+
+  h3 {
+    margin-top: 20px;
+    @include set-font-first-lev-titles();
+  }
+
+  .resourcesMenuCategories {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+    a {
+      margin-right: 40px;
+    }
+
+    li:nth-child(n + 2) {
+      margin-left: 73px;
+    }
+  }
+}
+
+.resourcesEbooksContainer,
+.resourcesPodcastsContainer,
+.resourcesVideoContainer,
+.resourcesBlogContainer {
+  display: none;
+}
+
+// BEGIN CSS FOR FEATURED RESOURCES
+
+iframe {
+  border-radius: 25px;
+}
+
+.resourcesContainer {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1240px;
+}
+
+.resourcesFeaturedContainer {
+  display: grid;
+
+  // grid-template-columns: 5.4fr 4fr;
+  //   grid-template-rows: 2.87fr 1.6fr 1.6fr;
+  grid-template-areas:
+    "video podcasts"
+    "videos ebook"
+    "blogs ebook";
+
+  .featuredVideoContainer {
+    grid-area: video;
+  }
+
+  .featuredVideosContainer {
+    margin-top: 50px;
+    grid-area: videos;
+
+    h5 {
+      @include set-font-feat-titles-res;
+    }
+
+    .test {
+      display: flex;
+      justify-content: space-between;
+
+      .singleFeaturedVideosContainer {
+        width: 25%;
+
+        iframe {
+          height: 101px;
+          border-radius: 25px;
+        }
+      }
+    }
+  }
+
+  .featuredBlogContainer {
+    grid-area: blogs;
+
+    h5 {
+      @include set-font-feat-titles-res;
+    }
+
+    .test2 {
+      display: flex;
+      justify-content: space-between;
+
+      .singleFeaturedBlogContainer {
+        width: 25%;
+
+        a {
+          img {
+            height: 101px;
+            border-radius: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  .featuredPodcastsContainer {
+    grid-area: podcasts;
+    margin-left: 75px;
+    h5 {
+      @include set-font-feat-titles-res;
+    }
+  }
+
+  .featuredEbookContainer {
+    grid-area: ebook;
+    margin-left: 75px;
+    margin-top: 50px;
+    h5 {
+      @include set-font-feat-titles-res;
+    }
+    .singleFeaturedEbookContainer {
+      display: flex;
+      align-items: center;
+      a {
+        width: 50%;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      p {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+.singleEbooksContainer {
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+
+  img {
+    grid-column: 1/2;
+    align-self: center;
+  }
+  .ebooksMeta {
+    grid-column: 2/3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 50px;
+    padding: 100px 50px 100px 0;
+
+    .ebooksTitle {
+      h5 {
+        @include set-font-feat-titles-res;
+      }
+    }
+    > p {
+      @include set-font-meta-res;
+    }
+    .downloadButtonLink {
+      position: relative;
+      bottom: 30px;
+    }
+  }
+}
+
+// .resourcesVideoContainer {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+//     section:nth-child(1) {
+//         grid-column: 1/2;
+//         grid-row: 1/7;
+//         margin-top: 15px;
+
+//         .videoMeta {
+//             h3 {
+
+//                 @include set-font-menus-cat-res;
+//                 font-weight: bold;
+//             }
+
+//         }
+
+//         iframe {
+//             border-radius: 25px;
+//             height: 351px;
+//             width: 510px;
+//         }
+//     }
+
+//     section:nth-child(2) {
+//         grid-column: 2/3;
+//         grid-row: 1/7;
+//         margin-top: 15px;
+
+//         .videoMeta {
+//             align-content: center;
+
+//             h3 {
+//                 align-items: center;
+//             }
+//         }
+//     }
+
+//     section:nth-child(3) {
+//         grid-column: 2/3;
+//         grid-row: 2/7;
+//     }
+
+//     section:nth-child(4) {
+//         grid-column: 2/3;
+//         grid-row: 3/7;
+//     }
+
+//     section:nth-child(5) {
+//         grid-column: 2/3;
+//         grid-row: 4/7;
+//     }
+
+//     section:nth-child(6) {
+//         grid-column: 2/3;
+//         grid-row: 5/7;
+//     }
+
+//     section:nth-child(7) {
+//         grid-column: 2/3;
+//         grid-row: 6/7;
+//     }
+
+//     section:nth-child(n+2) {
+//         display: flex;
+//         margin-left: 20px;
+//         iframe {
+//             height: 94px;
+//             width: 140px;
+//             border-radius: 25px;
+
+//         }
+
+//         .videoMeta {
+//             h3 {
+//                 @include set-font-menus-cat-res;
+//                 font-weight: bold;
+//                 margin-left: 20px;
+//             }
+
+//             p {
+//                 @include set-font-ebook-descr-res;
+//             }
+//         }
+
+//     }
+
+//     section:nth-child(n+3) {
+//         margin-top: 15px;
+//     }
+
+// }
+
+// .test3 {
+//     overflow: hidden;
+//     white-space: nowrap;
+//     text-overflow: ellipsis;
+//     max-width: 400px;
+//     margin-left: 20px;
+//     @include set-font-meta-res;
+
+// }
+
+// .resourcesPodcastsContainer {
+//     display: grid;
+//     grid-template-columns: 2fr 1fr;
+//     grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+//     .singleResourcesPodcastsContainer:nth-child(n+2){
+//         width: 85%;
+//     }
+
+//     .singleResourcesPodcastsContainer:nth-child(n+3){
+//         width: 85%;
+//        margin-top: 10px;
+//     }
+
+//     .singleResourcesPodcastsContainer:nth-child(1) {
+//        grid-column:2/3;
+//         grid-row: 1/12;
+//     }
+
+//     .singleResourcesPodcastsContainer:nth-child(2) {
+//        grid-column: 1/2;
+//         grid-row: 1/12;
+//     }
+
+//     .singleResourcesPodcastsContainer:nth-child(3) {
+//         grid-column: 1/2;
+//          grid-row: 2/12;
+//      }
+
+//      .singleResourcesPodcastsContainer:nth-child(4) {
+//         grid-column: 1/2;
+//          grid-row: 3/12;
+//      }
+
+//      .singleResourcesPodcastsContainer:nth-child(5) {
+//         grid-column: 1/2;
+//          grid-row: 4/12;
+//      }
+
+//      .singleResourcesPodcastsContainer:nth-child(6) {
+//         grid-column: 1/2;
+//          grid-row: 5/12;
+//      }
+
+//      .singleResourcesPodcastsContainer:nth-child(7) {
+//         grid-column: 1/2;
+//          grid-row: 6/12;
+//      }
+
+//      .singleResourcesPodcastsContainer:nth-child(8) {
+//         grid-column: 1/2;
+//          grid-row: 7/12;
+//      }
+
+//      .singleResourcesPodcastsContainer:nth-child(9) {
+//         grid-column: 1/2;
+//          grid-row: 8/12;
+//      }
+
+//      .singleResourcesPodcastsContainer:nth-child(10) {
+//         grid-column: 1/2;
+//          grid-row: 9/12;
+//      }
+
+//      .singleResourcesPodcastsContainer:nth-child(11) {
+//         grid-column: 1/2;
+//          grid-row: 10/12;
+//      }
+
+//      .singleResourcesPodcastsContainer:nth-child(12) {
+//         grid-column: 1/2;
+//          grid-row: 11/12;
+//      }
+//      .singleResourcesPodcastsContainer {
+//         width: 75%;
+//      }
+// }
+
+// .resourcesBlogContainer {
+
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     margin-bottom: 50px;
+//     grid-gap: 100px 60px;
+
+//     .singleResourcesBlogContainer {
+
+//          img {
+//             height: 211px;
+//             object-fit: cover;
+
+//          }
+//          .singleResourcesBlogMeta{
+
+//              p {
+//                 @include set-font-menus-cat-res;
+//              }
+//              h3 {
+//                 @include set-font-menus-cat-res;
+//                 font-weight: bold;
+//              }
+//          }
+//     }
+// }

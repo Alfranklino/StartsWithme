@@ -1,0 +1,252 @@
+/*****
+How to call a Mixins?
+If you want to call the mixins below:
+		@mixin center-block {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+You just have to do this:
+.box{
+	@include center-block();
+}
+
+
+****/
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+  font-size: ($sizeValue * 16) * 1px;
+  font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//Mixins for fonts -- Don't forget to add the colours variables.
+$an_d_bold: 'Avenir-Next-Demi-Bold';
+$an_r: 'Avenir-Next-Regular';
+$an_bold: 'Avenir-Next-Bold';
+$an_med: 'Avenir-Next-Medium';
+$an_hv: 'Avenir-Next-Heavy';
+$an_d_bold_it: 'Avenir-Next-Demi-Bold-Italic';
+$txt_shad_black: 0 2px 4px rgba(0, 0, 0, 0.15);
+
+@mixin set-font-content-base {
+  font-family: $an_med; //Regular.
+  font-size: 16px;
+  line-height: 32px;
+}
+
+//1-Menu
+
+@mixin set-font-menu {
+  font-family: $an-d-bold;
+  font-size: 18px;
+}
+
+//2-footer
+@mixin set-font-phone-footer {
+  font-family: $an_d_bold;
+  font-size: 20px;
+}
+@mixin set-font-lets-book-phone {
+  font-family: $an_d_bold;
+  font-size: 30px;
+}
+
+@mixin set-font-content-footer {
+  font-family: $an_med; //Regular no need.
+  font-size: 16px;
+}
+
+@mixin set-font-copyright-footer {
+  font-family: $an_med;
+  font-size: 14px;
+}
+
+//3-Thank-you-page
+@mixin set-font-thank-you-title {
+  font-family: $an_r;
+  font-size: 30px;
+  line-height: normal;
+}
+
+//4-Contact-Us-page
+@mixin set-font-contact-title {
+  font-family: $an_bold;
+  font-size: 50px;
+}
+@mixin set-font-contact-mindfulness {
+  font-family: $an_bold;
+  font-size: 26px;
+}
+@mixin set-font-contact-step-text {
+  font-family: $an_med;
+  font-size: 18px;
+}
+@mixin set-font-contact-steps-number {
+  font-family: $an_hv;
+  font-size: 40px;
+}
+@mixin set-font-contact-form-label {
+  font-family: $an_r;
+  font-size: 16px;
+}
+
+//Headers titles
+@mixin set-font-first-lev-titles {
+  font-family: $an_bold;
+  font-size: 40px;
+}
+
+//Resources
+
+@mixin set-font-menus-cat-res {
+  font-family: $an_d_bold;
+  font-size: 16px;
+}
+@mixin set-font-feat-titles-res {
+  font-family: $an_d_bold;
+  font-size: 26px;
+}
+@mixin set-font-pagination-res {
+  font-family: $an_bold;
+  font-size: 12px;
+}
+@mixin set-font-meta-res {
+  font-family: $an_r;
+  font-size: 12px;
+}
+@mixin set-font-ebook-descr-res {
+  font-family: $an_d_bold;
+  font-size: 11px;
+}
+
+//Resources --Blog
+@mixin set-font-post-title-blog {
+  font-family: $an_bold;
+  font-size: 20px;
+}
+//Resources --ebook
+@mixin set-font-agift-title-ebook {
+  font-family: $an_d_bold;
+  font-size: 30px;
+}
+@mixin set-font-afree-subtitle-ebook {
+  font-family: $an_med;
+  font-size: 22px;
+}
+@mixin set-font-descr-ebook {
+  font-family: $an_r;
+  font-size: 20px;
+}
+
+//Services & front-page
+@mixin set-font-main-title {
+  font-family: $an_bold;
+  font-size: 50px;
+  text-shadow: $txt_shad_black;
+  color: $color__brand-white;
+  width: 28%;
+  line-height: 70px;
+}
+//Services
+@mixin set-font-main-title-serv {
+  font-family: $an_bold;
+  font-size: 50px;
+  color: $color__brand-white;
+  text-shadow: $txt_shad_black;
+}
+@mixin set-font-main-descr-serv {
+  font-family: $an_med;
+  font-size: 24px;
+  color: $color__brand-white;
+  text-shadow: $txt_shad_black;
+}
+@mixin set-font-title-lv2-serv {
+  font-family: $an_bold;
+  font-size: 26px;
+}
+
+@mixin set-font-descr-lv2-serv {
+  font-family: $an_med;
+  font-size: 16px;
+}
+@mixin set-font-learn-more-serv {
+  font-family: $an_bold;
+  font-size: 16px;
+}
+//Services --single service
+@mixin set-main-title-single-serv {
+  font-family: $an_bold;
+  font-size: 26px;
+}
+@mixin set-main-content-title-single-serv {
+  //Same for the aside-content
+  font-family: $an_bold;
+  font-size: 20px;
+}
+
+//About
+@mixin set-font-main-title-sbout {
+  font-family: $an_bold;
+  font-size: 50px;
+}
+@mixin set-font-speakers-about {
+  //same to service lv2 & As seen in title & biography
+  font-family: $an_bold;
+  font-size: 26px;
+}
+@mixin set-font-speakers-name-about {
+  font-family: $an_d_bold;
+  font-size: 24px;
+}
+@mixin set-font-speakers-title-about {
+  font-family: $an_d_bold;
+  font-size: 18px;
+}
+//Single speaker page = biography
+@mixin set-font-speaker-name-biograpgy {
+  font-family: $an_r;
+  font-size: 16px;
+}
+
+//Home
+@mixin set-font-title-lv2 {
+  font-family: $an_d_bold;
+  font-size: 26px;
+}
+@mixin set-font-slogan-white {
+  font-family: $an_d_bold;
+  font-size: 30px;
+  color: $color__brand-white;
+}
+@mixin set-font-featured-services {
+  font-family: $an_med;
+  font-size: 30px;
+}
+@mixin set-content-center-page {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 200px 1fr;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  h4 {
+    margin-right: 50px;
+    align-self: center;
+  }
+}
+//Testimonials
+@mixin set-font-testimonial {
+  font-family: $an_d_bold_it;
+  font-size: 19px;
+  line-height: 32px;
+  color: $color__text-testimonial;
+}

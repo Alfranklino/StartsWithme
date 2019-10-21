@@ -1,0 +1,46 @@
+// Structure
+
+$base__space-unit: 1.5rem;
+
+// Colors
+
+$color__brand-white: #FFFEFA;
+$color__text-main: #464646;
+$color__brand-blue: #20BED4;
+$color__brand-light-blue: #9BEAE7;
+$color__brand-orange: #F39E65;
+$color__brand-light-orange: #FBDEB3;
+$color__brand-yellow: #FEF5CC;
+$color__brand-light-yellow: #FFFCEE;
+$color__brand-light-grey: #ababab;
+$color__brand-medium-orange-links: #fc9f66;
+$color__brand-light-grey-font: #5f5f5f;
+$color__text-testimonial: #414141;
+
+$color__background-body: $color__brand-white;
+$color__background-screen: $color__brand-white;
+$color__text-screen: #21759b;
+
+$color__background-hr: $color__brand-white;
+$color__background-pre: $color__brand-white;
+$color__background-ins: $color__brand-white;
+$color__background-gradient: linear-gradient(#20BED4 , #9BEAE7);
+
+$color__border-abbr: #000;
+
+$color__link: #20BED4;
+$color__link-visited: #000;
+$color__resource-categ-menu: #909195;
+$color__link-hover: #1fbed9;
+
+// Typography
+
+$font__main: 'Avenir-Next-Medium';
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+
+// Paths
+$path__font-avenirNext: '../../fonts/AvenirNext';
+$path__font-yrsa: '../../fonts/Yrsa';

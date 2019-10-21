@@ -1,0 +1,68 @@
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+/* Buttons */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: none;
+	border-color: none;
+	border-radius: 15px;
+	background: $color__brand-orange;
+	color:$color__brand-white;
+	font-size: 18px;
+	line-height: 1;
+	padding: .6rem 1rem .4rem;
+	margin-top: 5%;
+
+	&:hover {
+		border-color: #ccc #bbb #aaa;
+		background: $color__brand-light-orange;
+		color: $color__text-main;
+		cursor: pointer;
+	}
+
+	&:active,
+	&:focus {
+		border-color: #aaa #bbb #bbb;
+	}
+}
+
+	input[type="submit"] {
+		float: right;
+	}
+
+/* Fields */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"]
+ {
+	border: none;
+    border-bottom: 1px solid #888;
+	background: transparent;
+	color: $color__brand-light-grey;
+	margin-bottom: 5%;
+	padding: 5px;
+	width: 100%;
+
+	&:focus {
+		color:$color__text-main;
+	}
+}
+
+textarea {
+	color: $color__brand-light-grey;
+	border: 1px solid #ccc;
+	border-radius: 7px;
+	width: 100% ;
+	max-height: 8rem;
+	padding: 5px;
+	margin-top: 5%;
+}
+

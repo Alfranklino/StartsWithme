@@ -1,0 +1,36 @@
+.search-results{
+    .site-content{
+        width: 100%;
+    }
+     .site-main{
+        margin-top: 10rem;
+        margin-bottom: 5rem;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+
+        article{
+            margin-bottom: 2rem;
+            margin-top: 3rem;
+        }
+    }
+
+     .page-title {
+        font-family: $an_bold;
+        font-size: 32px;
+        letter-spacing: .10rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $color__brand-orange;
+     }
+
+     .entry-title{
+        font-family: $an_med;
+        font-size: 20px;
+     }
+
+     .entry-summary{
+        font-family: $an_r;
+        font-size: 16px;
+        text-align: justify;
+     }
+}

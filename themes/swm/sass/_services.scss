@@ -1,0 +1,155 @@
+.page-template-services{
+    .entry-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        background: $color__background-gradient;
+        border-radius: 0 0 18rem 0;
+        height: 475px;
+        width: 100%;
+        h2{
+            padding-left: 10%;
+            padding-right: 10%;
+            margin-bottom: 2%;
+            line-height: 1.2;
+            letter-spacing: .10rem;
+            @include set-font-main-title-serv;
+        }
+        h4{
+            padding-left: 10%;
+            padding-right: 15%;
+            line-height: 1.2;
+            @include set-font-main-descr-serv;
+        }
+    }
+
+    .entry-content{
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+            .service{
+                display: grid;
+                grid-row-gap: 2rem;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 3rem;
+                width: 100%;
+            }
+            .services-featured-image {
+                justify-self: start;
+                    img{
+                    border-radius: 25px;
+                    max-width: 274px;
+                    max-height: 201px;
+                    }
+             }
+            .services-information{
+                display: grid;
+                grid-row-gap: 1.5rem;
+                width: 100%;
+                h2 {
+                    @include set-font-title-lv2-serv;
+                }
+                p{
+                    line-height:normal;
+                    text-align: left;
+                    @include set-font-descr-lv2-serv;
+                }
+                a {
+                    letter-spacing: .10rem;
+                    @include set-font-learn-more-serv;
+                }
+            }
+            hr {
+                background-color: $color__brand-light-grey;
+                border: .5px;
+                height: 1px;
+                margin-bottom: 3rem;
+                width: 100%;
+            }
+
+    }
+
+
+
+
+@media (min-width: 700px) {
+        .entry-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        background: $color__background-gradient;
+        border-radius: 0 0 18rem 0;
+        height: 475px;
+        width: 100%;
+        h2{
+            padding-left: 10%;
+            padding-right: 60%;
+            margin-bottom: 2%;
+            line-height: normal;
+            letter-spacing: .10rem;
+            @include set-font-main-title-serv;
+        }
+        h4{
+            padding-left: 10%;
+            padding-right: 60%;
+            line-height: normal;
+            @include set-font-main-descr-serv;
+        }
+    }
+
+    .entry-content{
+        width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+            .service{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-row-gap: 1rem;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 3rem;
+                height: auto;
+            }
+            .services-featured-image {
+                justify-self: center;
+                    img{
+                    border-radius: 25px;
+                    max-width: 274px;
+                    max-height: 201px;
+                    }
+             }
+            .services-information{
+                display: grid;
+                grid-row-gap: 1.5rem;
+                width: 75%;
+                h2 {
+                    @include set-font-title-lv2-serv;
+                }
+                p{
+                    line-height: normal;
+                    text-align: justify;
+                    @include set-font-descr-lv2-serv;
+                }
+                a {
+                    letter-spacing: .10rem;
+                    @include set-font-learn-more-serv;
+                }
+            }
+            hr {
+                background-color: $color__brand-light-grey;
+                border: .5px;
+                height: 1px;
+                margin-bottom: 3rem;
+                width: 45%;
+            }
+
+        }
+    }
+}

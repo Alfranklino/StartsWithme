@@ -1,0 +1,207 @@
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+.site-header {
+  overflow: hidden;
+  background: $color__brand-white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.5rem;
+  z-index: 99;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  .nav-logo {
+    width: 20%;
+    justify-self: center;
+    align-self: center;
+    .logo {
+      width: 50%;
+      height: 50%;
+    }
+  }
+
+  .menu-and-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+
+    #primary-menu {
+      font-family: $an_med;
+      font-size: 14px;
+      display: flex;
+      flex-direction: row;
+      width: 40%;
+      list-style: none;
+
+      li:nth-last-child(1) a {
+        color: $color__brand-white;
+        background: $color__brand-orange;
+        border-radius: 15px;
+        padding: 0.25em 1.2em;
+      }
+      li {
+        padding: 0.5em;
+      }
+
+      .menu-item a:hover {
+        border-bottom: none;
+      }
+    }
+    fieldset {
+      border: none;
+      
+
+      .fa-search {
+        border: none;
+        &:hover {
+          background: none;
+        }
+      }
+
+      .search-field {
+        width: 40%;
+        color: #666;
+        background: none;
+        border: none;
+        display: none;
+      }
+    }
+  }
+}
+
+a {
+  color: $color__link;
+  text-decoration: none;
+
+  &:visited {
+    color: $color__link-visited;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color__link-hover;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+
+/* Desktop version*/
+@media screen and (min-width: 1200px) {
+  .site-header {
+    overflow: hidden;
+    background: $color__brand-white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.5rem;
+    z-index: 99; //set to 99 inside the minified css
+  }
+
+  .site-main {
+    margin-top: 5rem;
+  }
+
+  .main-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    .nav-logo {
+      width: 20%;
+      justify-self: center;
+      align-self: center;
+      .logo {
+        width: 25%;
+        height: 50%;
+      }
+    }
+
+    .menu-and-search {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      width: 80%;
+
+      #primary-menu {
+        @include set-font-menu;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        list-style: none;
+
+        li:nth-last-child(1) a {
+          color: $color__brand-white;
+          background: $color__brand-orange;
+          border-radius: 15px;
+          padding: 0.25em 1.2em;
+        }
+
+        li {
+          padding: 0.5em;
+        }
+        .menu-item a:hover {
+          border-bottom: 2px solid #4e4949;
+        }
+      }
+
+      fieldset {
+        border: none;
+        .fa-search {
+          border: none;
+          &:hover {
+            background: none;
+          }
+        }
+
+        .search-field {
+          width: 50%;
+          color: #666;
+          background: none;
+          border: none;
+          display: none;
+        }
+      }
+    }
+  }
+
+  a {
+    color: $color__link;
+    text-decoration: none;
+
+    &:visited {
+      color: $color__link-visited;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color__link-hover;
+    }
+    &:focus {
+      outline: thin dotted;
+    }
+    &:hover,
+    &:active {
+      outline: 0;
+    }
+  }
+}
