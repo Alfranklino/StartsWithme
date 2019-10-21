@@ -1,0 +1,30 @@
+
+
+.resourcesBlogContainer {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 50px;
+    grid-gap: 71px 62px;
+    
+    .singleResourcesBlogContainer {
+        
+
+         img {
+            height: 211px;
+            object-fit: cover;
+
+         }
+         .singleResourcesBlogMeta{
+
+             p {
+                @include set-font-menus-cat-res; 
+             }
+             h3 {
+                @include set-font-descr-ebook ;
+                font-weight: normal;
+               
+             }
+         }
+    }
+}

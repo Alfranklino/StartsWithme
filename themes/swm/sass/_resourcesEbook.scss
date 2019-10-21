@@ -1,0 +1,55 @@
+.resourcesEbooksContainer {
+
+
+    .singleEbooksContainer {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+
+        img {
+            grid-column: 1/2;
+            align-self: center;
+        }
+
+        .ebooksMeta {
+            grid-column: 2/3;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 50px;
+            padding: 100px 50px 100px 0;
+
+            .ebooksTitle {
+                h5 {
+                    @include set-font-feat-titles-res;
+                }
+
+            }
+
+            >p {
+                @include set-font-meta-res;
+            }
+
+            .downloadButtonLink {
+                position: relative;
+                bottom: 30px;
+            }
+        }
+
+
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .singleEbooksContainer {
+        display: grid;
+        grid-template-rows: 1fr 1fr 4fr 1fr 1fr;
+        grid-template-columns: 1fr;
+
+        img {
+            grid-row: 3/4;
+        }
+    }
+
+}

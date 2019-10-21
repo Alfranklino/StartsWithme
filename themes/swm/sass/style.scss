@@ -82,9 +82,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 
 //Resources
+@import "resources";
 @import "resourcesFeatured";
+@import "resourcesEbook";
+@import "resourcesPodcasts";
+@import "resourcesVideos";
+@import "resourcesBlogs";
 @import "404";
 @import "single-speaker";
 @import "search";
 @import "our-team";
-
+@import "single-post"
